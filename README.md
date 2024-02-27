@@ -2,7 +2,7 @@
 
 ### Start: All the coding program is finish by Python, the application I used to finish coding is [PyCharm](https://www.jetbrains.com/pycharm/download/?section=windows#section=windows)  
     ```
-    
+    using it
     ```
 
 ### 1. Python GUI(graphical user interface):  
@@ -18,8 +18,8 @@
    ```
    pip install xxxx
    # This is the format in terminal to install the library you need
-   ```
-   ```
+   ```  
+```
    import matplotlib.pyplot as plt
    import numpy as np
 
@@ -38,7 +38,7 @@
           ylim=(0, 8), yticks=np.arange(1, 8))
 
    plt.show()
-   ```
+```
    
    #### 2.2 PyQt5  
    --The first part I have talked about we might need GUI for users, the user interface can be done by PyQt5(structure) and matplotlib(visualization).
@@ -56,7 +56,7 @@
    --Open NI Max, and then connect the intrument address
    --use the following codes to test if the connection is successful  
    
-   ```
+```  
    import pyvisa
 
    rm = pyvisa.ResourceManager()
@@ -64,10 +64,67 @@
    print("Available Resources:")
    for resource in resources:
        print(resource)
-   ```
-
+       
+```    
    
-### 3. Instruments  
-   ```
+### 3. Instruments
+   3.1 K2400  
+    --K2400 is an instrument using PyVisa lib, we can remotely use codes to connect the hardware instruments and achive our goals.  
+    --Here are the exp codes to drive k2400
     
-   ```
+    ```
+    # import necessary libs
+    import sys
+    sys.path.append('./Qcodes')
+    from qcodes.instrument_drivers.tektronix.Keithley_2400 import Keithley_2400 as Keithley2400
+    
+    import pyvisa
+    
+    # open Keithley 2400
+    rm = pyvisa.ResourceManager()
+    try:
+        instrument = rm.open_resource('ASRL4::INSTR')  # replace with correct infor
+        identity = instrument.query('*IDN?')
+        print('Instrument Identity:', identity)
+    except Exception as e:
+        print('Error:', e)
+    finally:
+        instrument.close()
+    
+    
+    use_random = 0 #for test only!!! Set to 0 in real experiments!!!!
+    
+    # define a control function for Keithley 2400
+    def control_k2400():
+        try:
+            # initialized Keithley 2400
+            k2400 = Keithley2400(name='k2400', address='10')
+    
+            # set up Keithley 2400
+            k2400.source_voltage(0.1)  # 设置电压源电压为0.1 V
+    
+            # action
+            current = k2400.measure_current()
+    
+            # print
+            print(f"Measured Current: {current} A")
+    
+        except Exception as e:
+            # catch possible errors
+            print(f"An error occurred: {str(e)}")
+    
+        finally:
+            # close it
+            k2400.disconnect()
+            print("Keithley 2400 disconnected.")
+    
+    # 主程序入口
+    if __name__ == '__main__':
+        # use the function to control K2400
+        control_k2400()
+    ```
+   --Here are the exp codes on how to drive intrument. Later I will explain step by step:
+   --a. connection between hardware and local address:
+    ```
+    123
+    ```
