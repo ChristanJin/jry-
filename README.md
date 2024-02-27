@@ -72,7 +72,7 @@
     --K2400 is an instrument using PyVisa lib, we can remotely use codes to connect the hardware instruments and achive our goals.  
     --Here are the exp codes to drive k2400
     
-    ```
+```
     # import necessary libs
     import sys
     sys.path.append('./Qcodes')
@@ -122,9 +122,9 @@
     if __name__ == '__main__':
         # use the function to control K2400
         control_k2400()
-    ```
+```
    --Here are the exp codes on how to drive intrument. Later I will explain step by step:
    --a. connection between hardware and local address:
-    ```
+```
     123
-    ```
+```
