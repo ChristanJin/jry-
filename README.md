@@ -43,7 +43,8 @@
    #### 2.2 PyQt5  
    --The first part I have talked about we might need GUI for users, the user interface can be done by PyQt5(structure) and matplotlib(visualization).
    --PyQt5 is an application for design the GUI interface, it can connect ui interface and python codes.(This is finished by converting the .ui output to .py files)
-   --PyQt5 intro:
+   --PyQt5 intro:  
+   PyQt5 is an application that we can use formal user interface's properties to design an interface without coding.  
    
    #### 2.3 pyvisa  
    --each code driven instrument has their specific lib  
@@ -66,5 +67,7 @@
    ```
 
    
-   
 ### 3. Instruments  
+   ```
+    
+   ```
