@@ -41,9 +41,13 @@
    ```
    
    #### 2.2 PyQt5  
-   --The first part I have talked about we might need GUI for users, the user interface can be done by PyQt5(structure) and matplotlib(visualization).
-   --PyQt5 is an application for design the GUI interface, it can connect ui interface and python codes.(This is finished by converting the .ui output to .py files)
-   --PyQt5 intro:
+   --The first part I have talked about we might need GUI for users, the user interface can be done by PyQt5(structure) and matplotlib(visualization).  
+   --PyQt5 is an application for design the GUI interface, it can connect ui interface and python codes.(This is finished by converting the .ui output to .py files)  
+   --PyQt5 intro:  
+       step1: download [PyQt5](https://www.qt.io/download)  
+       step2: open Qt Creator on your computer, create new project -> Qt for Python -> Window UI ![](https://codehs.com/uploads/fd63edb6633b2b822e9d85bcd4f24d5b)  
+       step3: double click the .ui file. ![](https://codehs.com/uploads/0e1e721f30d1a382da8fc3d5d180a2a0)  
+       step4: drag what you need for this gui. ![](https://codehs.com/uploads/140ff30f0902590d41fa885084824ddc)  
    
    #### 2.3 pyvisa  
    --each code driven instrument has their specific lib  
@@ -52,7 +56,7 @@
 
    --The instrument driver for Keithley 2400 are [488.2](https://www.ni.com/en/support/downloads/drivers/download.ni-488-2.html#484357) and [NI Visa](https://www.ni.com/en/support/downloads/drivers/download.ni-visa.html#521671) and [NI Max](https://www.ni.com/en/support/downloads/drivers/download.system-configuration.html#521523)
    
-   --Open NI Max, and then connect the intrument address
+   --Open NI Max, and then connect the intrument address  
    --use the following codes to test if the connection is successful  
    
    ```
