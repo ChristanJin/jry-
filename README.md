@@ -1,11 +1,9 @@
 # starter package:
 
 ### Start: All the coding program is finish by Python, the application I used to finish coding is [PyCharm](https://www.jetbrains.com/pycharm/download/?section=windows#section=windows)  
-    ```
-    
-    ```
+
 ### ChatGPTs for Research  
-()[ChatGPTs]  
+(ChatGPTs)[ChatGPTs]  
 ### 1. Python GUI(graphical user interface):  
    Most of the users have no idea about coding part, so GUI is a good one for user experience.  
    GUI can form an interface that users will directly see diagrams or the data without coding experience.  
